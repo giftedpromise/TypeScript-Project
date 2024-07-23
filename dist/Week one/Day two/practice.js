@@ -1,0 +1,23 @@
+"use strict";
+let userName = "Charlie";
+let userAge = 30;
+let isEmployed = true;
+console.log(`Hello, my name is ${userName}, I am ${userAge} years old and I am ${isEmployed}`);
+let a = 10;
+let b = 20;
+let sum = a + b;
+let difference = b - a;
+let product = a * b;
+let quotient = b / a;
+console.log(`Sum: ${sum}`);
+console.log(`Difference: ${difference}`);
+console.log(`Product: ${product}`);
+console.log(`Quotient: ${quotient}`);
+let x = true;
+let y = false;
+let z = true;
+console.log(`x && y: ${x && y}`);
+console.log(`x || y: ${x || y}`);
+console.log(`!y: ${!y}`);
+console.log(`x && z: ${x && z}`);
+//# sourceMappingURL=practice.js.map

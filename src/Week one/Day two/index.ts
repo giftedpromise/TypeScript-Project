@@ -78,3 +78,56 @@ if (value1 === "string") {
   // TypeScript knows that `value` is a string in this block.
   console.log(value1.toUpperCase());
 }
+
+/* 3. void
+The void type is used to represent the absence of a value, 
+typically used as the return type of functions that do not return a value.
+*/
+
+function logMessage(message: string): void {
+  console.log(message);
+}
+
+/* 4. null and undefined
+The null and undefined types represent the absence of a value. 
+In strict mode, you have to explicitly allow these types in your type annotations.
+*/
+
+let value2: null = null;
+let anotherValue: undefined = undefined;
+
+/* 5. never
+The never type represents values that never occur. 
+It is used as a return type for functions that always throw an error or never return.
+*/
+
+function error(message: string): never {
+  throw new Error(message);
+}
+
+function infiniteLoop(): never {
+  while (true) {}
+}
+
+/* 6. object
+The object type represents non-primitive types, i.e.,
+ anything that is not number, string, boolean, symbol, null, or undefined.
+
+ */
+let obj: object = { name: "Alice" };
+obj = [1, 2, 3]; // This is allowed because arrays are also objects.
+
+/* 7. Symbol
+The symbol type represents unique and immutable values that can be used as object keys.
+
+*/
+
+let sym1 = Symbol("key1");
+let sym2 = Symbol("key2");
+
+let obj1 = {
+  [sym1]: "value1",
+  [sym2]: "value2",
+};
+
+console.log(obj1[sym1]); // "value1"
